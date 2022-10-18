@@ -54,7 +54,7 @@ class Honk {
       this.client.createMessage(message.channel.id, "nice");
     }
     const random2 = Math.floor(Math.random() * 1000);
-    if (random2 === 420 && message?.member && client.getRESTGuildMember(message.guildID, client.user.id).?permissions?.has(BigInt(134217728)) {
+    if (random2 === 420 && message?.member && message.guild.members.get(this.client.user.id)?.permissions?.has(BigInt(134217728))) {
       this.client.editGuildMember(message.guildID, message.member.id, { nick: 'honk' }, 'honk :3')
     }
   };
